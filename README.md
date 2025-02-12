@@ -1,50 +1,117 @@
-# React + TypeScript + Vite
+# Blog Web - FE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## System Minimum Requirements
 
-Currently, two official plugins are available:
+General
+- Node.js ≥ 20
+- Yarn ≥ 1.22.10
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Dependencies
 
-## Expanding the ESLint configuration
+This project is built using:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React (v19) with TypeScript
 
-- Configure the top-level `parserOptions` property like this:
+- Vite for fast development and build
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Ant Design for UI components
+
+- Styled Components for styling
+
+- React Router DOM for navigation
+
+- Axios for API requests (Client-Side)
+
+## Start development
+
+Prerequisites:
+Make sure, to install `yarn` as the package manager.
+
+Install all dependencies (run if there's a new dependency added in `package.json`)
+
+```bash
+yarn
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+And run the development server:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+yarn dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
+
+## Available Scripts
+
+- `yarn dev` - Starts the development server with Vite
+
+- `yarn build` - Builds the project with TypeScript and Vite
+
+- `yarn lint` - Runs ESLint to check for code quality
+
+- `yarn preview` - Serves the built project for preview
+
+- `yarn test` - Runs Jest tests with coverage
+
+### Testing
+
+This project uses Jest and React Testing Library for unit and integration testing. Run tests with:
+
+```
+yarn test
+```
+
+### Linting
+
+Run ESLint to check for code issues:
+
+```
+yarn lint
+```
+
+### Build for Production
+
+To generate a production build, run:
+
+```
+yarn build
+```
+
+This will compile the project using TypeScript and Vite.
+
+## Branching Strategy
+
+We follow a structured branching strategy to maintain a clean and organized codebase. All changes should be pushed to a dedicated feature branch before merging into main via a Pull Request (PR).
+
+### Branch Naming Conventions
+
+- Feature Branch: feature/<feature-name> – For new features.
+
+- Bug Fix Branch: fix/<bug-description> – For bug fixes.
+
+- Refactor Branch: refactor/<code-improvement> – For code refactoring.
+
+- Hotfix Branch: hotfix/<urgent-fix> – For critical fixes in production.
+
+Development Flow
+
+1. Create a new branch based on main:
+
+```
+git checkout -b feature/new-feature
+```
+
+2. Commit your changes with meaningful messages following git conventions.
+
+3. Push your branch:
+```
+git push origin feature/new-feature
+```
+
+4. Create a Pull Request (PR) to merge your branch into main.
+
+5. Request code review and make necessary changes.
+
+6. Merge the PR once approved.
+
+This ensures code quality, reviewability, and smooth collaboration. For any issues or contributions, please raise a PR and tag me @zaqiakbaar. 🚀
