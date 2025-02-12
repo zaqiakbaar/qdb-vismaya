@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should render sidebar renders user info when userDetails is available 1`] = `
+<span
+  class="ant-typography sc-fLDLck ggdxqX css-dev-only-do-not-override-xex5fb"
+  textalign="center"
+>
+  Test User
+</span>
+`;
