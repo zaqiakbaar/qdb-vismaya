@@ -26,7 +26,7 @@ export const useBlogDetailsHandlers = () => {
 
     const onFinishEditingBlogData = useCallback(async (shouldEdit:boolean, setEditMode?: (e:boolean) => void) => {
         const response = await fetchers<IBlogListResponse>({
-            url:`${config.BASE_API_URL}/posts/${routeParams?.id}`,
+            url:`${config.TYPICODE_URL}/posts/${routeParams?.id}`,
             method: 'PUT',
             data: blogData
         });
@@ -55,7 +55,7 @@ export const useBlogDetailsHandlers = () => {
     const onDeleteBlogData =  async () => {
         try {
             await fetchers({
-                url:`${config.BASE_API_URL}/posts/${routeParams?.id}`,
+                url:`${config.TYPICODE_URL}/posts/${routeParams?.id}`,
                 method:'DELETE'
             });
             await navigate('/blogs')
